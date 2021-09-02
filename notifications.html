@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        
+        <!--
+        Author: Steven McNally (Y1977934)
+        TM470 Project
+        -->
+        
+        <title>Bellaghy GAC</title>
+    </head>
+    <body>
+        <div class="app">
+            <br>
+            <br>
+            <h1>Bellaghy GAC</h1>
+            <h3>Notifications</h3>
+            
+            <div>
+				<!-- TODO II. Widget navigation buttons -->
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>Football</th>
+                        <th>Camogie</th>
+                    </tr>
+                    <tr>
+                        <td>Senior</td>
+                        <td><input type="checkbox" id="senfootnot" name="senfootnot" value="senfootnot"></td>
+                        <td><input type="checkbox" id="sencamognot" name="sencamognot" value="sencamognot"></td>
+                    </tr>
+                    <tr>
+                        <td>Reserve</td>
+                        <td><input type="checkbox" id="resfootnot" name="resfootnot" value="resfootnot"></td>
+                        <td><input type="checkbox" id="rescamognot" name="rescamognot" value="rescamognot"></td>
+                    </tr>
+                    <tr>
+                        <td>Minor</td>
+                        <td><input type="checkbox" id="minfootnot" name="minfootnot" value="minfootnot"></td>
+                        <td><input type="checkbox" id="mincamognot"name="mincamognot" value="mincamognot"></td>
+                    </tr>
+                    <tr>
+                        <td>U16</td>
+                        <td><input type="checkbox" id="u16footnot" name="u16footnot" value="u16footnot"></td>
+                        <td><input type="checkbox" id="u16camognot" name="u16camognot" value="u16camognot"></td>
+                    </tr>
+                    <tr>
+                        <td>U14</td>
+                        <td><input type="checkbox" id="u14footnot" name="u14footnot" value="u14footnot"></td>
+                        <td><input type="checkbox" id="u14camognot" name="u14camognot" value="u14camognot"></td>
+                    </tr>
+                </table>
+                
+            </div>
+            
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
