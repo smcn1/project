@@ -5,7 +5,7 @@ $password="Lip87#q";
 $database_name="bellaghygac";
 
 // create connection
-$conn=mysqli_connect($servername, $username, $password, database_name);
+$conn=mysqli_connect($servername, $username, $password, $database_name);
 
 // check connection
 if (!$conn)
