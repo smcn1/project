@@ -15,13 +15,13 @@ if (!$conn)
 
 if(isset($_POST['save']))
 {
-    $name - $_POST['name'];
-    $address - $_POST['address'];
-    $phone - $_POST['phone'];
-    $num1 - $_POST['num1'];
-    $num2 - $_POST['num2'];
-    $num3 - $_POST['num3'];
-    $num4 - $_POST['num4'];
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $phone = $_POST['phone'];
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $num3 = $_POST['num3'];
+    $num4 = $_POST['num4'];
     
     $sql_query = "INSERT INTO lotto (name, address, phone, num1, num2, num3, num4)
     VALUES ('$name', '$address', '$phone', '$num1', '$num2', '$num3', '$num4')";
