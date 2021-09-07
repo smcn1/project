@@ -31,7 +31,7 @@ if(isset($_POST['save']))
     if (mysqli_query($conn, $sql_query))
     {
         //$day=date('w');
-        $hour=date('H');
+        $hour="(date('H'))";
         echo (hour);
         //echo "New details Entry inserted successfully!<br>";
         
