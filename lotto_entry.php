@@ -13,6 +13,9 @@ if (!$conn)
     die("Connection Failed:" . mysqli_connect_error());
 }
 
+$day=date('w');
+$hour=date('H');
+
 if(isset($_POST['save']))
 {
     $name = $_POST['name'];
@@ -28,7 +31,8 @@ if(isset($_POST['save']))
     
     if (mysqli_query($conn, $sql_query))
     {
-        echo "New details Entry inserted successfully!<br>";
+        echo day + hour;
+        //echo "New details Entry inserted successfully!<br>";
         
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
         //date('w');
