@@ -37,7 +37,7 @@ if(isset($_POST['save']))
             echo "its Monday!!!";
         }
         else{
-            echo "its not Monday!!!";
+            echo date("H:i:s")."<br>";
         }
         
         //store the date and time to the variable
