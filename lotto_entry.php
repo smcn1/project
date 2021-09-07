@@ -30,11 +30,21 @@ if(isset($_POST['save']))
     {
         echo "New details Entry inserted successfully ! Current date and time is : ";
         
+        //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
+        //date('w');
+        //note: returns 0 through to 6 but as string so to check what day do this
+        if(date('w') == 2){
+            echo "its Tuesday!!!";
+        }
+        else{
+            echo "its not tuesday!!!"
+        }
+        
         //store the date and time to the variable
-        $myDate = date("d-m-y h:i:s");
+        //$myDate = date("d-m-y h:i:s");
         
         //display the date and time
-        echo $myDate;
+        //echo $myDate;
     }
     else
     {
