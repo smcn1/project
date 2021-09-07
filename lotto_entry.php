@@ -41,7 +41,7 @@ if(isset($_POST['save']))
             echo "Successfully entered for this weeks draw. Good Luck!";
         }
         else {
-            echo "Missed this weeks 7pm deadline. Entered for next weeks draw. Good Luck!"
+            echo "Missed this weeks 7pm deadline. Entered for next weeks draw. Good Luck!";
         }
     }
     else
