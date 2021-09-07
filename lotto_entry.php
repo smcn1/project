@@ -4,6 +4,8 @@ $username="root";
 $password="Lip87#q";
 $database_name="bellaghygac";
 
+//$af3=false;
+
 // create connection
 $conn=mysqli_connect($servername, $username, $password, $database_name);
 
@@ -33,7 +35,7 @@ if(isset($_POST['save']))
         if (date('H') > 15) {
             $af3 = true;
         }
-        if (af3) {
+        if ($af3) {
             echo "Its after 3";
         }
         
