@@ -28,7 +28,13 @@ if(isset($_POST['save']))
     
     if (mysqli_query($conn, $sql_query))
     {
-        echo "New details Entry inserted successfully !";
+        echo "New details Entry inserted successfully ! Current date and time is : ";
+        
+        //store the date and time to the variable
+        $myDate = date("d-m-y h:i:s");
+        
+        //display the date and time
+        echo $myDate;
     }
     else
     {
