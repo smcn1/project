@@ -33,7 +33,10 @@ if(isset($_POST['save']))
         if (date('H') > 15) {
             $af3 = true;
         }
-        echo $af3;
+        if (af3) {
+            echo "Its after 3";
+        }
+        
         //echo "New details Entry inserted successfully!<br>";
         
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
