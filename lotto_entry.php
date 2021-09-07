@@ -33,11 +33,11 @@ if(isset($_POST['save']))
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
         //date('w');
         //note: returns 0 through to 6 but as string so to check what day do this
-        if(date('w') == 2){
-            echo "its Tuesday!!!";
+        if(date('w') == 1){
+            echo "its Monday!!!";
         }
         else{
-            echo "its not tuesday!!!";
+            echo "its not Monday!!!";
         }
         
         //store the date and time to the variable
