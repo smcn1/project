@@ -13,8 +13,7 @@ if (!$conn)
     die("Connection Failed:" . mysqli_connect_error());
 }
 
-$day=date('w');
-$hour=date('H');
+
 
 if(isset($_POST['save']))
 {
@@ -31,6 +30,8 @@ if(isset($_POST['save']))
     
     if (mysqli_query($conn, $sql_query))
     {
+        $day=date('w');
+        $hour=date('H');
         echo day + hour;
         //echo "New details Entry inserted successfully!<br>";
         
