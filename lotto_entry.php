@@ -25,17 +25,19 @@ if(isset($_POST['save']))
     $num3 = $_POST['num3'];
     $num4 = $_POST['num4'];
     
-    $after7 = false;
-    $day = date('H');
+    if (date('H') > 16 && date('w') == 1) {
+        $table = "lotto2";
+    }
+    else {
+        $table = "lotto";
+    }
     
-    $sql_query = "INSERT INTO lotto (name, address, phone, num1, num2, num3, num4)
+    $sql_query = "INSERT INTO $table (name, address, phone, num1, num2, num3, num4)
     VALUES ('$name', '$address', '$phone', '$num1', '$num2', '$num3', '$num4')";
     
     if (mysqli_query($conn, $sql_query))
     {
-        
-        
-        echo $day;
+        echo "draw entered";
         
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
         //date('w');
