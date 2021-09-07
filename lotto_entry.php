@@ -28,7 +28,7 @@ if(isset($_POST['save']))
     
     if (mysqli_query($conn, $sql_query))
     {
-        echo "New details Entry inserted successfully!";
+        echo "New details Entry inserted successfully!<br>";
         
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
         //date('w');
