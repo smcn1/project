@@ -30,9 +30,9 @@ if(isset($_POST['save']))
     
     if (mysqli_query($conn, $sql_query))
     {
-        $day=date('w');
+        //$day=date('w');
         $hour=date('H');
-        echo (day);
+        echo (hour);
         //echo "New details Entry inserted successfully!<br>";
         
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
