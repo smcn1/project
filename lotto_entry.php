@@ -13,8 +13,6 @@ if (!$conn)
     die("Connection Failed:" . mysqli_connect_error());
 }
 
-
-
 if(isset($_POST['save']))
 {
     $name = $_POST['name'];
@@ -25,35 +23,26 @@ if(isset($_POST['save']))
     $num3 = $_POST['num3'];
     $num4 = $_POST['num4'];
     
-    if (date('H') > 17 && date('w') == 2) {
+    // sends form data to secondary table in database if it is 7pm or after on a draw day (Monday)
+    if (date('H') > 18 && date('w') == 1) {
         $table = "lotto2";
     }
     else {
         $table = "lotto";
     }
     
+    // inserts form data into appropriate table and gives user feedback
     $sql_query = "INSERT INTO $table (name, address, phone, num1, num2, num3, num4)
     VALUES ('$name', '$address', '$phone', '$num1', '$num2', '$num3', '$num4')";
     
     if (mysqli_query($conn, $sql_query))
     {
-        echo "draw entered";
-        
-        //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
-        //date('w');
-        //note: returns 0 through to 6 but as string so to check what day do this
-        //if(date('w') == 1){
-            //echo "its Monday!!!";
-        //}
-        //else{
-            //echo date("D M j G:i:s T Y")."<br>";
-        //}
-        
-        //store the date and time to the variable
-        //$myDate = date("d-m-y h:i:s");
-        
-        //display the date and time
-        //echo $myDate;
+        if ($table == "lotto") {
+            echo "Successfully entered for this weeks draw. Good Luck!";
+        }
+        else {
+            echo "Missed this weeks 7pm deadline. Entered for next weeks draw. Good Luck!"
+        }
     }
     else
     {
