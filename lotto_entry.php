@@ -28,7 +28,7 @@ if(isset($_POST['save']))
     
     if (mysqli_query($conn, $sql_query))
     {
-        echo "New details Entry inserted successfully ! Current date and time is : ";
+        echo "New details Entry inserted successfully!";
         
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
         //date('w');
@@ -37,7 +37,7 @@ if(isset($_POST['save']))
             echo "its Monday!!!";
         }
         else{
-            echo date("H:i:s")."<br>";
+            echo date("D M j G:i:s T Y")."<br>";
         }
         
         //store the date and time to the variable
