@@ -32,7 +32,7 @@ if(isset($_POST['save']))
     {
         $day=date('w');
         $hour=date('H');
-        echo day + hour;
+        echo (day);
         //echo "New details Entry inserted successfully!<br>";
         
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
