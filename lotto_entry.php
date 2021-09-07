@@ -4,8 +4,6 @@ $username="root";
 $password="Lip87#q";
 $database_name="bellaghygac";
 
-//$af3=false;
-
 // create connection
 $conn=mysqli_connect($servername, $username, $password, $database_name);
 
@@ -27,19 +25,17 @@ if(isset($_POST['save']))
     $num3 = $_POST['num3'];
     $num4 = $_POST['num4'];
     
+    $after7 = false;
+    $day = date('H');
+    
     $sql_query = "INSERT INTO lotto (name, address, phone, num1, num2, num3, num4)
     VALUES ('$name', '$address', '$phone', '$num1', '$num2', '$num3', '$num4')";
     
     if (mysqli_query($conn, $sql_query))
     {
-        if (date('H') > 15) {
-            $af3 = true;
-        }
-        if ($af3) {
-            echo "Its after 3";
-        }
         
-        //echo "New details Entry inserted successfully!<br>";
+        
+        echo $day;
         
         //gets day of week as number(0=sunday, 1=monday..., 6=saturday)
         //date('w');
