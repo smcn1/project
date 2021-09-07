@@ -25,7 +25,7 @@ if(isset($_POST['save']))
     $num3 = $_POST['num3'];
     $num4 = $_POST['num4'];
     
-    if (date('H') > 16 && date('w') == 1) {
+    if (date('H') > 17 && date('w') == 1) {
         $table = "lotto2";
     }
     else {
