@@ -43,8 +43,7 @@ if(isset($_POST['save']))
     if (mysqli_query($conn, $sql_query))
     {
         if ($table == "lotto") {
-            echo "Successfully entered for this weeks draw. Good Luck!";
-            <button type="button" onclick="document.location='lotto.html'">Lotto</button>
+            alert "Successfully entered for this weeks draw. Good Luck!";
         }
         else {
             echo "Missed this weeks 7pm deadline. Entered for next weeks draw. Good Luck!";
