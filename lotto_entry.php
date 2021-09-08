@@ -23,10 +23,14 @@ if(isset($_POST['save']))
     $num3 = $_POST['num3'];
     $num4 = $_POST['num4'];
     
+    $numbers = array();
+    array_push($numbers, $num1, $num2, $num3, $num4);
+    
     // sends form data to secondary table in database if it is 7pm or after on a draw day (Monday)
     if (date('H') > 18 && date('w') == 1) {
         $table = "lotto2";
     }
+    // sends data to primary table
     else {
         $table = "lotto";
     }
@@ -39,6 +43,7 @@ if(isset($_POST['save']))
     {
         if ($table == "lotto") {
             echo "Successfully entered for this weeks draw. Good Luck!";
+            echo $numbers;
         }
         else {
             echo "Missed this weeks 7pm deadline. Entered for next weeks draw. Good Luck!";
