@@ -43,7 +43,11 @@ if(isset($_POST['save']))
     if (mysqli_query($conn, $sql_query))
     {
         if ($table == "lotto") {
-            alert "Successfully entered for this weeks draw. Good Luck!";
+            //echo "Successfully entered for this weeks draw. Good Luck!";
+            echo "<script>
+                        alert('Successfully entered for this weeks draw');
+                        window.history.go(-1);
+                        </script>";
         }
         else {
             echo "Missed this weeks 7pm deadline. Entered for next weeks draw. Good Luck!";
