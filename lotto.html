@@ -53,6 +53,7 @@
             
             <div>
 				<!-- TODO II. Widget navigation buttons -->
+                <div id="error"></div>
                 <form action="lotto_entry.php" method="post" id="lotto_entry">
                     <table border="1">
                         <tr>
@@ -60,7 +61,7 @@
                                 <label>Name</label>
                             </td>
                             <td>
-                                <input type="text" name="name" id="name">
+                                <input type="text" name="name" id="name" required>
                             </td>
                         </tr>
                         <tr>
@@ -68,7 +69,7 @@
                                 <label>Address</label>
                             </td>
                             <td>
-                                <input type="text" name="address" id="address">
+                                <input type="text" name="address" id="address" required>
                             </td>
                         </tr>
                         <tr>
@@ -76,7 +77,7 @@
                                 <label>Phone</label>
                             </td>
                             <td>
-                                <input type="text" name="phone" id="phone">
+                                <input type="text" name="phone" id="phone" required>
                             </td>
                         </tr>
                         <tr>
@@ -84,7 +85,7 @@
                                 <label>1st Num</label>
                             </td>
                             <td>
-                                <input type="number" name="num1" id="num1">
+                                <input type="number" name="num1" id="num1" min="1" max="30" step="1">
                             </td>
                         </tr>
                         <tr>
@@ -92,7 +93,7 @@
                                 <label>2st Num</label>
                             </td>
                             <td>
-                                <input type="number" name="num2" id="num2">
+                                <input type="number" name="num2" id="num2" min="1" max="30" step="1">
                             </td>
                         </tr>
                         <tr>
@@ -100,7 +101,7 @@
                                 <label>3st Num</label>
                             </td>
                             <td>
-                                <input type="number" name="num3" id="num3">
+                                <input type="number" name="num3" id="num3" min="1" max="30" step="1">
                             </td>
                         </tr>
                         <tr>
@@ -108,7 +109,7 @@
                                 <label>4st Num</label>
                             </td>
                             <td>
-                                <input type="number" name="num4" id="num4">
+                                <input type="number" name="num4" id="num4" min="1" max="30" step="1">
                             </td>
                         </tr>
                     </table>
